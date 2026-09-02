@@ -1,0 +1,163 @@
+/* Mengatur tampilan seluruh halaman */
+body {
+margin: 0;
+padding: 0;
+background-color: #eae0f5;
+color: #333333;
+
+font-family: Arial, sans-serif;
+text-align: center;
+
+min-height: 100vh;
+}
+
+/* Styling judul */
+h1 {
+color: blueviolet;
+font-size: 36px;
+font-weight: bold;
+text-align: center;
+margin-bottom: 25px;
+border-radius: 16px;
+border: 5px solid rgba(208, 208, 231, 0.699);
+background-color: rgba(246, 226, 255, 0.863);
+}
+
+/* Foto profil */
+img {
+width: 350px;
+max-width: 90%;
+height: auto;
+padding: 6px;
+background-color: white;
+border: 4px solid rgb(191, 127, 252);
+border-radius: 20px;
+box-shadow: 0 8px 20px rgba(91, 33, 182, 0.3);
+transition: 0.3s;
+}
+
+/* Efek hover foto */
+img:hover {
+transform: scale(1.03);
+box-shadow: 0 12px 25px rgba(91, 33, 182, 0.45);
+}
+
+/* Styling paragraf */
+p {
+color: #444444;
+font-size: 20px;
+font-weight: normal;
+line-height: 1.2;
+text-align: justify;
+max-width: 800px;
+margin: 48px auto;
+}
+
+/* Styling teks tebal */
+p b {
+font-weight: bold;
+}
+
+/* Styling link Instagram */
+a {
+color: #eb4a80;
+font-size: 24px;
+font-weight: bold;
+text-decoration: none;
+}
+
+/* Efek ketika kursor diarahkan ke link */
+a:hover {
+color: #833ab4;
+text-decoration: underline;
+}
+
+/* =================================
+MEDIA QUERY - DESKTOP
+Lebar layar >= 1024px
+================================= */
+@media screen and (min-width: 1024px) {
+    body {
+    background-color: #eae0f5;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+img {
+    width: 350px;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    font-size: 24px;
+    }
+}
+
+/* =================================
+MEDIA QUERY - TABLET
+768px - 1023px
+================================= */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+    background-color: #949de7ce;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+img {
+    width: 320px;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    font-size: 21px;
+    }
+}
+
+/* =================================
+MEDIA QUERY - MOBILE PHONE
+Lebar layar <= 767px
+================================= */
+
+@media screen and (max-width: 767px) {
+    body {
+    background-color: #bb8cf1d8;
+}
+
+h1 {
+    font-size: 26px;
+
+    margin: 15px 10px 25px;
+
+    border-width: 3px;
+}
+
+img {
+    width: 250px;
+
+    border-width: 3px;
+    border-radius: 15px;
+}
+
+p {
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    margin: 30px 20px;
+}
+
+a {
+    font-size: 18px;
+    }
+}
