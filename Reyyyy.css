@@ -1,0 +1,641 @@
+/* Mengatur tampilan seluruh halaman */
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #eae0f5;
+
+    color: #333333;
+
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   JUDUL
+   ========================================= */
+
+h1 {
+    color: blueviolet;
+
+    font-size: 36px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    margin: 20px auto 25px;
+
+    border-radius: 16px;
+
+    border: 5px solid rgba(208, 208, 231, 0.699);
+
+    background-color: rgba(246, 226, 255, 0.863);
+
+    padding: 10px;
+}
+
+
+/* =========================================
+   FOTO PROFIL
+   ========================================= */
+
+#img {
+    width: 350px;
+
+    max-width: 90%;
+
+    height: auto;
+
+    padding: 6px;
+
+    background-color: white;
+
+    border: 4px solid rgb(191, 127, 252);
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(91, 33, 182, 0.3);
+
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   HOVER FOTO PROFIL
+   ========================================= */
+
+#img:hover {
+    transform: scale(1.03);
+
+    box-shadow: 0 12px 25px rgba(91, 33, 182, 0.45);
+}
+
+
+/* =========================================
+   PARAGRAF
+   ========================================= */
+
+body > div > p {
+    color: #444444;
+
+    font-size: 20px;
+
+    font-weight: normal;
+
+    line-height: 1.2;
+
+    text-align: justify;
+
+    max-width: 800px;
+
+    margin: 48px auto;
+}
+
+
+/* =========================================
+   TEKS TEBAL
+   ========================================= */
+
+p b {
+    font-weight: bold;
+}
+
+
+/* =========================================
+   LINK INSTAGRAM
+   ========================================= */
+
+a {
+    color: #eb4a80;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HOVER LINK
+   ========================================= */
+
+a:hover {
+    color: #833ab4;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   JUDUL MAKANAN
+   ========================================= */
+
+h2 {
+    margin-top: 40px;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+
+    color: blueviolet;
+}
+
+
+/* =========================================
+   CSS GRID MAKANAN
+   ========================================= */
+
+.favorite-grid {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    display: grid;
+
+    /* 3 kolom dengan lebar sama */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* 3 baris dengan tinggi sama */
+    grid-template-rows: repeat(3, 150px);
+
+    /* Jarak antar card */
+    gap: 8px;
+
+
+    /* =====================================
+       GRID AREA
+
+       Baris 1:
+       nasi-text | nasi-photo | nasi-photo
+
+       Baris 2:
+       rendang-photo | rendang-text | sate-text
+
+       Baris 3:
+       rendang-photo | sate-photo | sate-photo
+       ===================================== */
+
+    grid-template-areas:
+
+        "nasi-text nasi-photo nasi-photo"
+
+        "rendang-photo rendang-text sate-text"
+
+        "rendang-photo sate-photo sate-photo";
+}
+
+
+/* =========================================
+   SEMUA CARD
+   ========================================= */
+
+.favorite-card {
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   CARD NASI GORENG - TULISAN
+   ========================================= */
+
+.nasi-text {
+
+    grid-area: nasi-text;
+
+    background-color: #ffd76b;
+
+    padding: 20px;
+
+    flex-direction: column;
+}
+
+
+.nasi-text h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 20px;
+
+    color: #111111;
+}
+
+
+.nasi-text p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    color: #222222;
+}
+
+
+/* =========================================
+   FOTO NASI GORENG
+   ========================================= */
+
+.nasi-photo {
+
+    grid-area: nasi-photo;
+}
+
+
+.nasi-photo img {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: none;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   FOTO RENDANG
+   SPAN 2 BARIS
+   ========================================= */
+
+.rendang-photo {
+
+    grid-area: rendang-photo;
+}
+
+
+.rendang-photo img {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: none;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   CARD RENDANG - TULISAN
+   ========================================= */
+
+.rendang-text {
+
+    grid-area: rendang-text;
+
+    background-color: #f58faf;
+
+    padding: 20px;
+
+    flex-direction: column;
+}
+
+
+.rendang-text h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 20px;
+
+    color: #111111;
+}
+
+
+.rendang-text p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    color: #222222;
+}
+
+
+/* =========================================
+   CARD SATE - TULISAN
+   ========================================= */
+
+.sate-text {
+
+    grid-area: sate-text;
+
+    background-color: #0ecdc3;
+
+    padding: 20px;
+
+    flex-direction: column;
+}
+
+
+.sate-text h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 20px;
+
+    color: #111111;
+}
+
+
+.sate-text p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    color: #222222;
+}
+
+
+/* =========================================
+   FOTO SATE
+   SPAN 2 KOLOM
+   ========================================= */
+
+.sate-photo {
+
+    grid-area: sate-photo;
+}
+
+
+.sate-photo img {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: none;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   HOVER FOTO GRID
+   ========================================= */
+
+.favorite-card img {
+
+    transition: 0.3s;
+}
+
+
+.favorite-card img:hover {
+
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   DESKTOP
+   ========================================= */
+
+@media screen and (min-width: 1024px) {
+
+    body {
+        background-color: #eae0f5;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    #img {
+        width: 350px;
+    }
+
+    body > div > p {
+        font-size: 20px;
+    }
+
+    a {
+        font-size: 24px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media screen and (min-width: 768px)
+       and (max-width: 1023px) {
+
+    body {
+        background-color: #949de7ce;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    #img {
+        width: 320px;
+    }
+
+    body > div > p {
+        font-size: 18px;
+    }
+
+    a {
+        font-size: 21px;
+    }
+
+    .favorite-grid {
+
+        width: 92%;
+
+        grid-template-rows: repeat(3, 130px);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media screen and (max-width: 767px) {
+
+    body {
+        background-color: #bb8cf1d8;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin: 15px 10px 25px;
+        border-width: 3px;
+    }
+
+    #img {
+        width: 250px;
+        border-width: 3px;
+        border-radius: 15px;
+    }
+
+    body > div > p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 30px 20px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 23px;
+        margin: 30px 15px 20px;
+    }
+
+
+    /* ===============================
+       GRID MOBILE
+       =============================== */
+
+    .favorite-grid {
+
+        width: 94%;
+        max-width: 900px;
+
+        grid-template-columns: 1fr 1fr;
+
+        /* SEMUA BARIS SAMA TINGGI */
+        grid-template-rows: repeat(4, 130px);
+
+        gap: 6px;
+
+        grid-template-areas:
+
+            "nasi-text nasi-photo"
+
+            "rendang-photo rendang-text"
+
+            "rendang-photo sate-text"
+
+            "sate-photo sate-photo";
+    }
+
+
+    /* ===============================
+       CARD TEXT
+       =============================== */
+
+    .nasi-text,
+    .rendang-text,
+    .sate-text {
+
+        width: 100%;
+        height: 100%;
+
+        padding: 10px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+    }
+
+
+    .nasi-text h3,
+    .rendang-text h3,
+    .sate-text h3 {
+
+        font-size: 16px;
+
+        margin: 0 0 6px 0;
+    }
+
+
+    .nasi-text p,
+    .rendang-text p,
+    .sate-text p {
+
+        font-size: 9px;
+
+        line-height: 1.3;
+
+        margin: 0;
+
+        text-align: center;
+    }
+}
